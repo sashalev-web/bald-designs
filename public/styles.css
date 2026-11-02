@@ -345,12 +345,38 @@ button {
   aspect-ratio: 1;
   min-height: 0;
   overflow: hidden;
+  isolation: isolate;
   opacity: 0;
   transform: translateY(24px) scale(0.98);
   animation: rise-in 1s var(--ease) 0.28s forwards;
 }
 
-.hero__visual img {
+.hero__visual::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  z-index: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--live-cyan) 22%, transparent) 0%,
+    transparent 68%
+  );
+  opacity: 0;
+  transform: scale(0.92);
+  pointer-events: none;
+  transition:
+    opacity 0.9s var(--ease),
+    transform 1.2s var(--ease);
+}
+
+.hero__visual.is-morphing::after {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.hero__visual img,
+.hero__frame {
   position: absolute;
   inset: 0;
   display: block;
@@ -359,6 +385,33 @@ button {
   max-width: none;
   object-fit: contain;
   object-position: center;
+}
+
+.hero__frame {
+  z-index: 1;
+  opacity: 0;
+  transform: scale(1.045);
+  filter: blur(10px) saturate(1.05);
+  transition:
+    opacity 1.15s var(--ease),
+    transform 1.35s var(--ease),
+    filter 1.15s var(--ease);
+  will-change: opacity, transform, filter;
+  pointer-events: none;
+}
+
+.hero__frame.is-active {
+  z-index: 2;
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0) saturate(1);
+}
+
+.hero__frame.is-exiting {
+  z-index: 3;
+  opacity: 0;
+  transform: scale(0.965);
+  filter: blur(12px) saturate(0.92);
 }
 
 /* —— Canvas explainer —— */
@@ -704,6 +757,25 @@ button {
     opacity: 1;
     transform: none;
     animation: none;
+  }
+
+  .hero__visual::after,
+  .hero__visual.is-morphing::after {
+    opacity: 0;
+    transition: none;
+    transform: none;
+  }
+
+  .hero__frame {
+    transition: none;
+    filter: none;
+    transform: none;
+    will-change: auto;
+  }
+
+  .hero__frame:not(.is-active) {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .gallery__media,

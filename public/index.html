@@ -72,12 +72,25 @@
                 <a class="btn btn--ghost" href="#how">How it works</a>
               </div>
             </div>
-            <div class="hero__visual">
+            <div class="hero__visual" data-hero-morph>
               <img
+                class="hero__frame is-active"
                 src="assets/hero-ship-dome.png"
                 width="1024"
                 height="1024"
                 alt="Traditional ship design sealed inside a glass dome"
+                data-hero-frame="dome"
+                decoding="async"
+              />
+              <img
+                class="hero__frame"
+                src="assets/hero-ship-scalp.png"
+                width="1024"
+                height="1024"
+                alt="Ship tattoo design worn on a bald head"
+                data-hero-frame="scalp"
+                aria-hidden="true"
+                decoding="async"
               />
             </div>
           </div>
