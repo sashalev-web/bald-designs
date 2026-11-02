@@ -4,7 +4,6 @@
   const cartCount = document.querySelector("[data-cart-count]");
   const cartBtn = document.querySelector("[data-cart-btn]");
   const year = document.querySelector("[data-year]");
-  const videoStub = document.querySelector("[data-video-stub]");
 
   let itemsInCart = 0;
 
@@ -74,18 +73,6 @@
         ],
         { duration: 320, easing: "ease-out" }
       );
-    });
-  }
-
-  if (videoStub) {
-    videoStub.addEventListener("click", () => {
-      const pressed = videoStub.getAttribute("aria-pressed") === "true";
-      videoStub.setAttribute("aria-pressed", pressed ? "false" : "true");
-      if (!pressed) {
-        window.setTimeout(() => {
-          videoStub.setAttribute("aria-pressed", "false");
-        }, 2200);
-      }
     });
   }
 

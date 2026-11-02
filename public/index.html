@@ -200,28 +200,20 @@
             Peel. Place. <span class="live-a">Express</span>.
           </h2>
           <p class="section-copy">
-            A short walkthrough of fitting a BaldDesign sheet — video coming soon. Tap play for the placeholder.
+            A short walkthrough of fitting a BaldDesign sheet — peel, place, and wear.
           </p>
 
-          <button
-            class="video-stub"
-            type="button"
-            aria-label="Play explainer video placeholder"
-            aria-pressed="false"
-            data-video-stub
-          >
-            <span class="video-stub__poster" aria-hidden="true"></span>
-            <span class="video-stub__label">
-              <span class="video-stub__play" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5.5v13l11-6.5-11-6.5Z" />
-                </svg>
-              </span>
-              <span class="video-stub__title">How BaldDesigns work</span>
-              <span class="video-stub__meta">0:45 · Placeholder</span>
-            </span>
-            <span class="video-stub__toast" data-video-toast>Video coming soon</span>
-          </button>
+          <div class="how-video">
+            <video
+              class="how-video__player"
+              controls
+              playsinline
+              preload="metadata"
+              aria-label="How BaldDesigns work"
+            >
+              <source src="/assets/how_it_works_video.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </section>
     </main>
