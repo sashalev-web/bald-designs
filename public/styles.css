@@ -228,17 +228,10 @@ button {
   overflow: clip;
 }
 
-.hero__grid {
-  display: grid;
-  /* Right column gets the majority so the ship-orb can fill the hero */
-  grid-template-columns: minmax(18rem, 0.75fr) minmax(0, 1.25fr);
-  gap: clamp(0.75rem, 2vw, 1.75rem);
-  align-items: center;
-}
-
-.hero__copy {
-  position: relative;
-  z-index: 1;
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 3vw, 2rem);
 }
 
 .hero__brand {
@@ -247,7 +240,7 @@ button {
   font-size: clamp(3.2rem, 9vw, 6.5rem);
   line-height: 0.92;
   letter-spacing: -0.045em;
-  margin: 0 0 1.1rem;
+  margin: 0;
   opacity: 0;
   transform: translateY(18px);
   animation: rise-in 0.9s var(--ease) 0.08s forwards;
@@ -255,6 +248,23 @@ button {
 
 .hero__brand .live {
   color: var(--live-coral);
+}
+
+/* Brand full-width above; below: copy left, media slot right (mock blue rect) */
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1fr) minmax(0, 1.15fr);
+  gap: clamp(1.25rem, 3.5vw, 2.75rem);
+  align-items: stretch;
+}
+
+.hero__copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
 }
 
 .hero__headline {
@@ -329,10 +339,9 @@ button {
 
 .hero__visual {
   position: relative;
-  width: min(100%, 52rem);
-  aspect-ratio: 1;
-  justify-self: stretch;
-  margin-inline: 0;
+  /* Absolute img does not set row height — slot stretches to match copy/CTAs */
+  align-self: stretch;
+  min-height: 14rem;
   overflow: hidden;
   opacity: 0;
   transform: translateY(24px) scale(0.98);
@@ -340,15 +349,17 @@ button {
 }
 
 .hero__visual img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: center 50%;
-  /* Zoom past the PNG's built-in white square margin so the orb dominates */
-  transform: scale(1.58);
-  transform-origin: 50% 50%;
+  object-position: center;
+  /* Trim PNG white margin so the dome fills the blue-rect slot */
+  transform: scale(1.28);
+  transform-origin: center;
 }
 
 /* —— Canvas explainer —— */
@@ -715,10 +726,16 @@ button {
 
   .hero__visual {
     order: -1;
-    width: min(100%, 24rem);
-    max-width: 24rem;
+    width: min(100%, 26rem);
+    max-width: 26rem;
+    aspect-ratio: 1;
+    min-height: 0;
     justify-self: center;
     margin-inline: auto;
+  }
+
+  .hero__visual img {
+    position: absolute;
   }
 
   .hero__brand {
