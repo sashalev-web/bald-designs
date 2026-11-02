@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Gridlock design  bold neon blocks">
+  <rect width="400" height="400" fill="#FAFAFA"/>
+  <rect x="40" y="40" width="150" height="150" fill="#FF2D55"/>
+  <rect x="210" y="40" width="150" height="70" fill="#00C2FF"/>
+  <rect x="210" y="120" width="70" height="70" fill="#FFE14A"/>
+  <rect x="290" y="120" width="70" height="70" fill="#111111"/>
+  <rect x="40" y="210" width="70" height="150" fill="#00E5A0"/>
+  <rect x="120" y="210" width="150" height="70" fill="#FF8A00"/>
+  <rect x="120" y="290" width="70" height="70" fill="#00C2FF"/>
+  <rect x="200" y="290" width="70" height="70" fill="#FF2D55"/>
+  <rect x="280" y="210" width="80" height="150" fill="#111111"/>
+</svg>

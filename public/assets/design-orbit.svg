@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Orbit design  concentric rings in cyan and coral">
+  <rect width="400" height="400" fill="#0B0B0B"/>
+  <circle cx="200" cy="200" r="170" fill="none" stroke="#00C2FF" stroke-width="18"/>
+  <circle cx="200" cy="200" r="130" fill="none" stroke="#FF2D55" stroke-width="14"/>
+  <circle cx="200" cy="200" r="90" fill="none" stroke="#FFE14A" stroke-width="12"/>
+  <circle cx="200" cy="200" r="50" fill="#00E5A0"/>
+  <circle cx="200" cy="200" r="22" fill="#FFFFFF"/>
+  <path d="M200 30 L210 70 L200 60 L190 70 Z" fill="#FF8A00"/>
+  <path d="M370 200 L330 210 L340 200 L330 190 Z" fill="#FF8A00"/>
+  <path d="M200 370 L190 330 L200 340 L210 330 Z" fill="#FF8A00"/>
+  <path d="M30 200 L70 190 L60 200 L70 210 Z" fill="#FF8A00"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Wave design  flowing bands of color">
+  <rect width="400" height="400" fill="#111111"/>
+  <path d="M0 80 Q100 20 200 80 T400 80 L400 0 L0 0 Z" fill="#00C2FF"/>
+  <path d="M0 160 Q100 100 200 160 T400 160 L400 80 Q300 140 200 80 T0 80 Z" fill="#FF2D55"/>
+  <path d="M0 240 Q100 180 200 240 T400 240 L400 160 Q300 220 200 160 T0 160 Z" fill="#FFE14A"/>
+  <path d="M0 320 Q100 260 200 320 T400 320 L400 240 Q300 300 200 240 T0 240 Z" fill="#00E5A0"/>
+  <path d="M0 400 Q100 340 200 400 T400 400 L400 320 Q300 380 200 320 T0 320 Z" fill="#FF8A00"/>
+</svg>

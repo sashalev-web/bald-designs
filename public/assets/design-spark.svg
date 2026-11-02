@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Spark design  starburst on deep blue">
+  <rect width="400" height="400" fill="#003D66"/>
+  <polygon points="200,40 220,160 340,120 240,200 360,260 220,240 200,360 180,240 40,260 160,200 60,120 180,160" fill="#FFE14A"/>
+  <circle cx="200" cy="200" r="48" fill="#FF2D55"/>
+  <circle cx="200" cy="200" r="22" fill="#FFFFFF"/>
+  <circle cx="80" cy="80" r="10" fill="#00E5A0"/>
+  <circle cx="330" cy="70" r="8" fill="#00C2FF"/>
+  <circle cx="70" cy="320" r="12" fill="#FF8A00"/>
+  <circle cx="340" cy="330" r="9" fill="#00E5A0"/>
+</svg>

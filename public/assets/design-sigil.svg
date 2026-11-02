@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Sigil design  abstract mark in coral and ink">
+  <rect width="400" height="400" fill="#FFF5F0"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#111111" stroke-width="10"/>
+  <path d="M120 260 L200 90 L280 260 Z" fill="#FF2D55"/>
+  <path d="M155 220 L200 130 L245 220 Z" fill="#FFE14A"/>
+  <circle cx="200" cy="240" r="36" fill="#00C2FF"/>
+  <rect x="188" y="250" width="24" height="90" fill="#111111"/>
+  <path d="M100 300 Q200 340 300 300" stroke="#00E5A0" stroke-width="12" fill="none" stroke-linecap="round"/>
+</svg>

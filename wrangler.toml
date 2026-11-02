@@ -1,0 +1,6 @@
+name = "square-field-0d6d"
+compatibility_date = "2026-11-02"
+
+# Static site via Workers Assets (no Worker script required).
+[assets]
+directory = "./public"

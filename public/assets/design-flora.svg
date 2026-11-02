@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Flora design  botanical shapes on mint">
+  <rect width="400" height="400" fill="#E8FFF4"/>
+  <ellipse cx="200" cy="210" rx="70" ry="110" fill="#00E5A0"/>
+  <ellipse cx="140" cy="180" rx="45" ry="90" fill="#00C2FF" transform="rotate(-28 140 180)"/>
+  <ellipse cx="265" cy="175" rx="48" ry="95" fill="#FF2D55" transform="rotate(30 265 175)"/>
+  <ellipse cx="200" cy="120" rx="40" ry="70" fill="#FFE14A"/>
+  <circle cx="200" cy="210" r="28" fill="#111111"/>
+  <path d="M200 320 C180 350 160 370 150 380" stroke="#111111" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <circle cx="80" cy="90" r="18" fill="#FF8A00"/>
+  <circle cx="330" cy="100" r="14" fill="#FF2D55"/>
+  <circle cx="320" cy="320" r="22" fill="#00C2FF"/>
+</svg>
