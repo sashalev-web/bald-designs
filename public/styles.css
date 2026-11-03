@@ -29,7 +29,6 @@
   --max: 72rem;
   --radius-sm: 0.35rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-morph: cubic-bezier(0.37, 0, 0.15, 1);
 }
 
 *,
@@ -356,32 +355,8 @@ button {
   animation: rise-in 1s var(--ease) 0.28s forwards;
 }
 
-.hero__visual::after {
-  content: "";
-  position: absolute;
-  inset: 12%;
-  z-index: 0;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    color-mix(in srgb, var(--live-cyan) 22%, transparent) 0%,
-    transparent 68%
-  );
-  opacity: 0;
-  transform: scale(0.92);
-  pointer-events: none;
-  transition:
-    opacity 1.4s var(--ease-morph),
-    transform 1.6s var(--ease-morph);
-}
-
-.hero__visual.is-morphing::after {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
 .hero__visual img,
-.hero__frame {
+.hero__image {
   position: absolute;
   inset: 0;
   display: block;
@@ -390,33 +365,6 @@ button {
   max-width: none;
   object-fit: contain;
   object-position: center;
-}
-
-.hero__frame {
-  z-index: 1;
-  opacity: 0;
-  transform: scale(1.03);
-  filter: blur(5px) saturate(1.02);
-  transition:
-    opacity 1.7s var(--ease-morph),
-    transform 1.8s var(--ease-morph),
-    filter 1.7s var(--ease-morph);
-  will-change: opacity, transform, filter;
-  pointer-events: none;
-}
-
-.hero__frame.is-active {
-  z-index: 2;
-  opacity: 1;
-  transform: scale(1);
-  filter: blur(0) saturate(1);
-}
-
-.hero__frame.is-exiting {
-  z-index: 3;
-  opacity: 0;
-  transform: scale(0.985);
-  filter: blur(6px) saturate(0.96);
 }
 
 /* —— Canvas explainer —— */
@@ -676,25 +624,6 @@ button {
     opacity: 1;
     transform: none;
     animation: none;
-  }
-
-  .hero__visual::after,
-  .hero__visual.is-morphing::after {
-    opacity: 0;
-    transition: none;
-    transform: none;
-  }
-
-  .hero__frame {
-    transition: none;
-    filter: none;
-    transform: none;
-    will-change: auto;
-  }
-
-  .hero__frame:not(.is-active) {
-    opacity: 0;
-    visibility: hidden;
   }
 
   .gallery__media,
