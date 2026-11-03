@@ -506,11 +506,6 @@ button {
   gap: 0.65rem;
 }
 
-/* Temporarily hide second gallery row (slots 4–6). Remove class to restore. */
-.gallery__item--parked {
-  display: none;
-}
-
 .gallery__media {
   aspect-ratio: 1;
   overflow: hidden;
