@@ -150,4 +150,34 @@
 
     syncMotionPreference();
   }
+
+  const howSection = document.getElementById("how");
+  const howVideo = howSection?.querySelector(".how-video__player");
+  if (howSection && howVideo && "IntersectionObserver" in window) {
+    howVideo.muted = true;
+    howVideo.setAttribute("playsinline", "");
+    howVideo.setAttribute("webkit-playsinline", "");
+
+    const tryPlay = () => {
+      const playPromise = howVideo.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => {});
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            tryPlay();
+          } else {
+            howVideo.pause();
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    observer.observe(howSection);
+  }
 })();
