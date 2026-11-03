@@ -80,8 +80,8 @@
   if (morphRoot) {
     const frames = Array.from(morphRoot.querySelectorAll("[data-hero-frame]"));
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const HOLD_MS = 2200;
-    const TRANSITION_MS = 900;
+    const HOLD_MS = 2800;
+    const TRANSITION_MS = 1800;
     let activeIndex = Math.max(
       0,
       frames.findIndex((frame) => frame.classList.contains("is-active"))

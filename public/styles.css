@@ -29,7 +29,7 @@
   --max: 72rem;
   --radius-sm: 0.35rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-morph: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-morph: cubic-bezier(0.37, 0, 0.15, 1);
 }
 
 *,
@@ -371,8 +371,8 @@ button {
   transform: scale(0.92);
   pointer-events: none;
   transition:
-    opacity 0.7s var(--ease-morph),
-    transform 0.85s var(--ease-morph);
+    opacity 1.4s var(--ease-morph),
+    transform 1.6s var(--ease-morph);
 }
 
 .hero__visual.is-morphing::after {
@@ -398,9 +398,9 @@ button {
   transform: scale(1.03);
   filter: blur(5px) saturate(1.02);
   transition:
-    opacity 0.85s var(--ease-morph),
-    transform 0.9s var(--ease-morph),
-    filter 0.85s var(--ease-morph);
+    opacity 1.7s var(--ease-morph),
+    transform 1.8s var(--ease-morph),
+    filter 1.7s var(--ease-morph);
   will-change: opacity, transform, filter;
   pointer-events: none;
 }
