@@ -462,6 +462,10 @@ button {
   max-width: 42ch;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .canvas__aside {
   font-family: var(--font-display);
   font-weight: 700;
