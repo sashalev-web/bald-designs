@@ -155,6 +155,7 @@
   const howVideo = howSection?.querySelector(".how-video__player");
   if (howSection && howVideo && "IntersectionObserver" in window) {
     howVideo.muted = true;
+    howVideo.loop = true;
     howVideo.setAttribute("playsinline", "");
     howVideo.setAttribute("webkit-playsinline", "");
 
