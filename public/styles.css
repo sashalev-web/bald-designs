@@ -242,6 +242,7 @@ button {
   line-height: 0.92;
   letter-spacing: -0.045em;
   margin: 0;
+  max-width: 100%;
   opacity: 0;
   transform: translateY(18px);
   animation: rise-in 0.9s var(--ease) 0.08s forwards;
@@ -249,6 +250,9 @@ button {
 
 .hero__brand .live {
   color: var(--live-coral);
+  /* Inline-block wraps as a unit so "Designs" drops to the next line on narrow screens */
+  display: inline-block;
+  max-width: 100%;
 }
 
 /* Brand full-width above; below: copy left, media slot right (mock blue rect) */
