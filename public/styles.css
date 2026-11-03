@@ -392,28 +392,10 @@ button {
   object-position: center;
 }
 
-/* Per-frame align: zoom scalp face to dome oval during crossfade */
-.hero__frame[data-hero-frame="dome"] {
-  --frame-scale: 1.02;
-  --frame-x: 0%;
-  --frame-y: 1%;
-  object-fit: contain;
-  object-position: 50% 48%;
-}
-
-.hero__frame[data-hero-frame="scalp"] {
-  --frame-scale: 1.62;
-  --frame-x: 0.5%;
-  --frame-y: 10%;
-  object-fit: cover;
-  object-position: 50% 36%;
-}
-
 .hero__frame {
   z-index: 1;
   opacity: 0;
-  transform: translate(var(--frame-x, 0%), var(--frame-y, 0%))
-    scale(calc(1.03 * var(--frame-scale, 1)));
+  transform: scale(1.03);
   filter: blur(5px) saturate(1.02);
   transition:
     opacity 1.7s var(--ease-morph),
@@ -426,16 +408,14 @@ button {
 .hero__frame.is-active {
   z-index: 2;
   opacity: 1;
-  transform: translate(var(--frame-x, 0%), var(--frame-y, 0%))
-    scale(var(--frame-scale, 1));
+  transform: scale(1);
   filter: blur(0) saturate(1);
 }
 
 .hero__frame.is-exiting {
   z-index: 3;
   opacity: 0;
-  transform: translate(var(--frame-x, 0%), var(--frame-y, 0%))
-    scale(calc(0.985 * var(--frame-scale, 1)));
+  transform: scale(0.985);
   filter: blur(6px) saturate(0.96);
 }
 
