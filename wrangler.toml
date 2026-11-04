@@ -1,6 +1,10 @@
 name = "square-field-0d6d"
+main = "worker.js"
 compatibility_date = "2026-11-02"
 
-# Static site via Workers Assets (no Worker script required).
+# Every request goes through the Worker so static files stay behind basic auth.
+# SITE_USERNAME and SITE_PASSWORD are Worker secrets, not stored in this repo.
 [assets]
 directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
