@@ -1,4 +1,4 @@
-/* BaldDesigns — marketing homepage */
+/* BoldOnBald — marketing homepage */
 
 :root {
   /* Surfaces */
@@ -249,7 +249,7 @@ button {
 
 .hero__brand .live {
   color: var(--live-coral);
-  /* Inline-block wraps as a unit so "Designs" drops to the next line on narrow screens */
+  /* Inline-block wraps as a unit so "OnBald" drops to the next line on narrow screens */
   display: inline-block;
   max-width: 100%;
 }

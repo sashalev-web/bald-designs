@@ -1,6 +1,6 @@
-# BaldDesigns
+# BoldOnBald
 
-Static homepage for BaldDesigns — sticker-like plastic sheets for bald heads.
+Static homepage for BoldOnBald — sticker-like plastic sheets for bald heads.
 
 Open `public/index.html` locally, or serve the `public/` directory with any static file server.
 
